@@ -17,4 +17,11 @@ class Order < ActiveRecord::Base
 	   self.customer_id = customer.id unless customer.nil?
   end
 
+  # Method for mapping the item ID to the item from the collection selector
+  # NOTE: I could not fully get the ID -> Name translation to work properly, so I added a text field to input the name by hand
+  def convert_item_id_to_name
+    item = Item.find_by_id(self.item_id)
+    self.item_name = item_name unless item.nil?
+  end
+
 end
