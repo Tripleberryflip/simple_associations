@@ -1,28 +1,31 @@
-<h1>Listing customers</h1>
+<div class="container" >
+  <div class = "span9" >
+    <h1>Listing customers</h1>
 
-<table class="table-striped">
-  <tr>
-    <th>Name</th>
-    <th>Phone number</th>
-    <th>Contact</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <table class="table border table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Phone number</th>
+        <th>Contact</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<% @customers.each do |customer| %>
-  <tr>
-    <td><%= customer.name %></td>
-    <td><%= customer.phone_number %></td>
-    <td><%= customer.contact %></td>
-    <td><%= link_to 'Show', customer %></td>
-    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-    <td><%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.name %></td>
+        <td><%= customer.phone_number %></td>
+        <td><%= customer.contact %></td>
+        <td><%= link_to 'Show', customer %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<br />
+    <br />
 
-<%= link_to 'New Customer', new_customer_path %>
-<!--<= display_customer_orders(customer) %>-->
+    <%= link_to 'New Customer', new_customer_path %>
+  </div>
+</div>
