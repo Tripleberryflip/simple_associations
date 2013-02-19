@@ -1,0 +1,19 @@
+@import "bootstrap";
+
+
+body {background-color:#b0c4de;}
+
+#columns {
+	width: 1000px;
+}
+
+#table_column {
+	width: 150px;
+}
+
+#columns .column {
+	position: relative;
+	width: 300px;
+	padding: 10px;
+	float: left;
+}

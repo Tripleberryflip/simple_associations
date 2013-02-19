@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container" >
+
+	<p>
+	  <b>Name:</b>
+	  <%= @customer.name %>
+	</p>
+
+	<p>
+	  <b>Phone number:</b>
+	  <%= @customer.phone_number %>
+	</p>
+
+	<p>
+	  <b>Contact:</b>
+	  <%= @customer.contact %>
+	</p>
+
+
+	<!--<% display_customer_orders(@customer) %>-->
+
+</div>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %>

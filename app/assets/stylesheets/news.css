@@ -1,0 +1,7 @@
+ #sidebar {
+ 	background-color: hsl(210, 2%, 80%);
+ 	-moz-border-radius: 15px;
+ 	border-radius: 15px;
+ 	padding: 10px;
+ 	color: #0088cc;
+ }
