@@ -7,7 +7,7 @@ module OrdersHelper
 	def display_customer_orders(customer)
 		customerName = customer.name
 		out = "<div class='container'><div class='hero-unit'><h1>#{customerName}'s Order Summary</h1></div>"
-		out << "<table class= 'table table-bordered table-striped'><tr><th>Item Ordered</th><th>Quantity Ordered</th><th>Total Cost</th></tr>"
+		out << "<table class= 'table table-rounded table-bordered table-striped'><tr><th>Item Ordered</th><th>Quantity Ordered</th><th>Total Cost</th></tr>"
 		if customer.orders.first.nil?
 			out << "<td>This customer has no orders to show</td><td></td><td</tr>"
 		else 
