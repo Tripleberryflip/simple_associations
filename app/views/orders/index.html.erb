@@ -1,29 +1,6 @@
 <div class="container" >
-  <div class="hero-unit"><h1>Listing orders</h1></div>
 
-  <table class="table table-rounded table-striped">
-    <tr>
-      <th>Customer</th>
-      <th>Quantity</th>
-      <th>Item name</th>
-      <th>Total cost</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-
-  <% @orders.each do |order| %>
-    <tr>
-      <td><%= order.customer_name %></td>
-      <td><%= order.quantity %></td>
-      <td><%= order.item.name rescue "Unknown" %></td>
-      <td><%= order.total_cost %></td>
-      <td><%= link_to 'Show', customer_order_path(order.customer, order) %></td>
-      <td><%= link_to 'Edit', edit_customer_order_path(order.customer, order) %></td>
-        <td><%= link_to 'Destroy', {:controller=>"orders", :action=>"destroy", :id=> order.id}, {confirm: 'Are you sure?', :method=> "delete" } %></td>
-    </tr>
-  <% end %>
-  </table>
+  <%= display_customer_orders(Customer.find(params[:customer_id])) %>
 
   <br />
 
