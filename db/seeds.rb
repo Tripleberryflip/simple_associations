@@ -24,16 +24,16 @@ item1 = Item.create!(:name=>"Shoes")
 item2 = Item.create!(:name=>"Burton Boots")
 item3 = Item.create!(:name=>"Lib Tech Snowboard")
 
-customer1order1 = Order.create!(:customer_name=> "High Tempo", :item_name=>"Shoes", :quantity=> 230, :total_cost=> 11500)
-customer1order2 = Order.create!(:customer_name=> "High Tempo", :item_name=>"Burton Boots", :quantity=> 150, :total_cost=> 30000)
-customer1order3 = Order.create!(:customer_name=> "High Tempo", :item_name=>"Lib Tech Snowboard", :quantity=> 75, :total_cost=> 22500)
+customer1order1 = Order.create!(:customer_name=> customer1.name, :item_id=> item1.id, :quantity=> 230, :total_cost=> 11500)
+customer1order2 = Order.create!(:customer_name=> customer1.name, :item_id=> item2.id, :quantity=> 150, :total_cost=> 30000)
+customer1order3 = Order.create!(:customer_name=> customer1.name, :item_id=> item3.id, :quantity=> 75, :total_cost=> 22500)
 
 
-customer2order1 = Order.create!(:customer_name=> "Bob's Snowy Mountain", :item_name=>"Shoes", :quantity=> 1000, :total_cost=> 50000)
-customer2order2 = Order.create!(:customer_name=> "Bob's Snowy Mountain", :item_name=>"Burton Boots", :quantity=> 500, :total_cost=> 100000)
-customer2order3 = Order.create!(:customer_name=> "Bob's Snowy Mountain", :item_name=>"Lib Tech Snowboard", :quantity=> 300, :total_cost=> 90000)
+customer2order1 = Order.create!(:customer_name=> customer2.name, :item_id=> item1.id, :quantity=> 1000, :total_cost=> 50000)
+customer2order2 = Order.create!(:customer_name=> customer2.name, :item_id=> item2.id, :quantity=> 500, :total_cost=> 100000)
+customer2order3 = Order.create!(:customer_name=> customer2.name, :item_id=> item3.id, :quantity=> 300, :total_cost=> 90000)
 
 
-customer3order1 = Order.create!(:customer_name=> "The House Boardshop", :item_name=>"Shoes", :quantity=> 80, :total_cost=>4000)
-customer3order2 = Order.create!(:customer_name=> "The House Boardshop", :item_name=>"Burton Boots", :quantity=> 100, :total_cost=> 20000)
-customer3order3 = Order.create!(:customer_name=> "The House Boardshop", :item_name=>"Lib Tech Snowboard", :quantity=> 102, :total_cost=> 30600)
+customer3order1 = Order.create!(:customer_name=> customer3.name, :item_id=> item1.id, :quantity=> 80, :total_cost=>4000)
+customer3order2 = Order.create!(:customer_name=> customer3.name, :item_id=> item2.id, :quantity=> 100, :total_cost=> 20000)
+customer3order3 = Order.create!(:customer_name=> customer3.name, :item_id=> item3.id, :quantity=> 102, :total_cost=> 30600)

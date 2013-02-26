@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 
   # Associations
   belongs_to :customer # an order belongs to a customer
-  has_one :item # an order consists of one item
+  belongs_to :item # an order consists of one item
 
   # Validations
   before_validation :convert_customer_name_to_id

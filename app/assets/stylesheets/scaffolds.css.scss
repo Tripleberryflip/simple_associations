@@ -1,9 +1,13 @@
 body {
-  background-color: #fff;
+  background-color: #b0c4de;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+.table {
+  background-color: #fff;
 }
 
 p, ol, ul, td {
@@ -14,8 +18,6 @@ p, ol, ul, td {
 
 pre {
   background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
 }
 
 a {

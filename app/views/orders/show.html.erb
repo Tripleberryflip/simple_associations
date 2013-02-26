@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
 <div class= "container">
+<p id="notice"><%= notice %></p>
 <p>
   <b>Customer:</b>
   <%= @order.customer_name %>
@@ -11,7 +11,7 @@
 
 <p>
   <b>Item name:</b>
-  <%= @order.item_name %>
+  <%= @order.item.name rescue "Unknown" %>
 </p>
 
 <p>
@@ -20,6 +20,6 @@
 </p>
 
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Edit', edit_customer_order_path(@order.customer, @order) %> |
+<%= link_to 'Back', customer_orders_path(@order.customer) %>
 </div>

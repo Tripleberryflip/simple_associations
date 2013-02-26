@@ -1,11 +1,13 @@
 <div class="container" >
-    <div class="hero-unit"><h1>Listing customers</h1></div>
+    <div class="hero-unit"><h1>Customer List</h1></div>
 
-    <table class="table border table-striped">
+    <table class="table table-striped">
       <tr>
         <th>Name</th>
         <th>Phone number</th>
         <th>Contact</th>
+        <th></th>
+        <th></th>
         <th></th>
         <th></th>
         <th></th>
@@ -19,6 +21,8 @@
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to 'Place Order', new_customer_order_path(customer) %></td>
+        <td><%= link_to 'View Orders', customer_orders_path(customer) %></td>
       </tr>
     <% end %>
     </table>

@@ -2,5 +2,5 @@ class Item < ActiveRecord::Base
   attr_accessible :name
 
   # Associations
-  belongs_to :order
+  has_many :orders
 end
